@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿
 #region Formel A
 // Satz des Pythagoras für a 
 
@@ -10,21 +9,56 @@ static double formela(double c, double b)
     double aaa = a - aa;
     double aaaa = Math.Sqrt(aaa);
 
+    Console.WriteLine("Das Ergebnis für a ist : " + aaaa);
+
     return aaaa;
 }
-Console.Write("Was ist c ?");
-double wic = Convert.ToDouble(Console.ReadLine());
-
-Console.Write("Was ist b ?");
-double wib = Convert.ToDouble(Console.ReadLine());
-
-Console.Write("Was ist a ?");
-double wia = Convert.ToDouble(Console.ReadLine());
+Console.Write("Wollen Sie a, b oder c berechnen? ");
+string antwort = Console.ReadLine();
+string antwort1 = antwort.ToLower();
 
 
+if (antwort1 == "a")
+{
+    Console.Write("Welchen Wert hat c?");
+    double c = Convert.ToDouble(Console.ReadLine());
+    double wic = c;
 
-double forma = formela(wic,wib);
-Console.WriteLine("Das Ergebnis für a ist : " + forma);
+    Console.Write("Welchen Wert hat b?");
+    double b = Convert.ToDouble(Console.ReadLine());
+    double wib = b;
+
+
+    formela(wic,wib);
+}
+
+if (antwort1 == "b")
+{
+    Console.Write("Welchen Wert hat a?");
+    double a = Convert.ToDouble(Console.ReadLine());
+    double wia = a;
+
+    Console.Write("Welchen Wert hat c?");
+    double c = Convert.ToDouble(Console.ReadLine());
+    double wic = c;
+
+    formelb(wia, wic);
+}
+
+if (antwort1 == "c")
+{
+    Console.Write("Welchen Wert hat a?");
+    double a = Convert.ToDouble(Console.ReadLine());
+    double wia = a;
+
+    Console.Write("Welchen Wert hat b?");
+    double b = Convert.ToDouble(Console.ReadLine());
+    double wib = b;
+
+    formelc(wia,wib);
+}
+
+
 #endregion
 
 #region Formel B
@@ -37,11 +71,14 @@ static double formelb(double a, double c)
     double bbb = b - bb;
     double bbbb = Math.Sqrt(bbb);
 
+    Console.WriteLine("Das Ergebnis für b ist " + bbbb);
+
+
     return bbbb;
 }
 
-double formb = formelb(wia, wic);
-Console.WriteLine("Das Ergebnis für b ist " + formb);
+
+
 #endregion
 
 #region Formel C
@@ -55,11 +92,12 @@ static double formelc(double a, double b)
     double ccc = b + cc;
     double cccc = Math.Sqrt(ccc);
 
+    Console.WriteLine("Das Ergebnis für c ist : " + cccc);
+
     return cccc;
 }
 
-double formc = formelc(wia, wib);
-Console.WriteLine("Das Ergebnis für c ist : " + formc);
+
 
 #endregion
 
