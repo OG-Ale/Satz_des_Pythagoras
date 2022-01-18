@@ -28,8 +28,16 @@ if (antwort1 == "a")
     double b = Convert.ToDouble(Console.ReadLine());
     double wib = b;
 
+    if (b > c)
+    {
+        Console.WriteLine("b darf nicht größer sein als c!");
+    }
+    else
+        formela(wic, wib);
 
-    formela(wic,wib);
+
+
+
 }
 
 if (antwort1 == "b")
@@ -41,8 +49,12 @@ if (antwort1 == "b")
     Console.Write("Welchen Wert hat c?");
     double c = Convert.ToDouble(Console.ReadLine());
     double wic = c;
-
-    formelb(wia, wic);
+    if (c > a)
+    {
+        Console.WriteLine("c darf nicht größer sein als a!");
+    }
+    else
+        formelb(wia, wic);
 }
 
 if (antwort1 == "c")
@@ -55,7 +67,12 @@ if (antwort1 == "c")
     double b = Convert.ToDouble(Console.ReadLine());
     double wib = b;
 
-    formelc(wia,wib);
+    if (b > a)
+    {
+        Console.WriteLine("b darf nicht größer sein als a!");
+    }
+    else
+        formelc(wia,wib);
 }
 
 
