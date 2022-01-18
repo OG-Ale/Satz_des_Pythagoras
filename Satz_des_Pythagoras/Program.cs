@@ -3,7 +3,7 @@
 #region Formel A
 // Satz des Pythagoras für a 
 
-static double formela(int c, int b)
+static double formela(double c, double b)
 {
     double a = Math.Pow(c,2);
     double aa = Math.Pow(b,2);
@@ -12,15 +12,25 @@ static double formela(int c, int b)
 
     return aaaa;
 }
+Console.Write("Was ist c ?");
+double wic = Convert.ToDouble(Console.ReadLine());
 
-double forma = formela(2,1);
-Console.WriteLine(forma);
+Console.Write("Was ist b ?");
+double wib = Convert.ToDouble(Console.ReadLine());
+
+Console.Write("Was ist a ?");
+double wia = Convert.ToDouble(Console.ReadLine());
+
+
+
+double forma = formela(wic,wib);
+Console.WriteLine("Das Ergebnis für a ist : " + forma);
 #endregion
 
 #region Formel B
 // Satz des Pythagoras für b
 
-static double formelb(int a, int c)
+static double formelb(double a, double c)
 {
     double b = Math.Pow(c, 2);
     double bb = Math.Pow(a, 2);
@@ -30,15 +40,15 @@ static double formelb(int a, int c)
     return bbbb;
 }
 
-double formb = formelb(2, 4);
-Console.WriteLine(formb);
+double formb = formelb(wia, wic);
+Console.WriteLine("Das Ergebnis für b ist " + formb);
 #endregion
 
 #region Formel C
 
 // Satz des Pythagoras für c
 
-static double formelc(int a, int b)
+static double formelc(double a, double b)
 {
     double c = Math.Pow(a, 2);
     double cc = Math.Pow(b, 2);
@@ -48,8 +58,8 @@ static double formelc(int a, int b)
     return cccc;
 }
 
-double formc = formelc(4, 8);
-Console.WriteLine(formc);
+double formc = formelc(wia, wib);
+Console.WriteLine("Das Ergebnis für c ist : " + formc);
 
 #endregion
 
